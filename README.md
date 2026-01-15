@@ -1,1 +1,1 @@
-https://github.com/georibeiro228/atividade.formul-rio.git
+ https://georibeiro228.github.io/atividade.formul-rio/
