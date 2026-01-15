@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato Moderno</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2343/2343694.png">
+    <!-- Google Fonts para tipografia moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h2>Entre em Contato</h2>
+            <p>Preencha os campos abaixo e retornaremos o mais breve possível.</p>
+        </div>
+        
+        <form id="formContato" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                    <span class="error-message" id="error-nome">Por favor, insira seu nome.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail Profissional</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                    <span class="error-message" id="error-email">Insira um e-mail válido.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço Residencial</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro e cidade">
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <div class="select-wrapper">
+                    <select id="estado" name="estado">
+                        <option value="" disabled selected>Selecione seu estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Interesses e Hobbies</label>
+                <div class="checkbox-grid">
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="gosto" value="Estudar">
+                        <span class="checkbox-custom"></span>
+                        <span class="label-text">Estudar</span>
+                    </label>
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="gosto" value="Assistir">
+                        <span class="checkbox-custom"></span>
+                        <span class="label-text">Assistir</span>
+                    </label>
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="gosto" value="Dormir">
+                        <span class="checkbox-custom"></span>
+                        <span class="label-text">Dormir</span>
+                    </label>
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="gosto" value="Academia">
+                        <span class="checkbox-custom"></span>
+                        <span class="label-text">Academia</span>
+                    </label>
+                    <label class="checkbox-card">
+                        <input type="checkbox" name="gosto" value="Comer">
+                        <span class="checkbox-custom"></span>
+                        <span class="label-text">Comer</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Sua Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar você hoje?"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="btnSubmit">
+                <span class="btn-text">Enviar Mensagem</span>
+                <div class="loader" id="loader"></div>
+            </button>
+        </form>
+        
+        <div id="successMessage" class="success-message">
+            <div class="success-icon">✓</div>
+            <h3>Mensagem Enviada!</h3>
+            <p>Obrigado pelo contato. Responderemos em breve.</p>
+            <button onclick="resetForm()" class="btn-reset">Enviar outra</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
